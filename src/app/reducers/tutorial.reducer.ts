@@ -7,5 +7,17 @@ import * as TutorialActions from '../actions/tutorial.action'
 const initialState: Tutorial = {
     name: 'Intial Tutorial',
     url: 'www.google.com'
+}
+// This is our actual reducer. It takes in a state, which we're defining as a Tutorial type
+// and we've optionally bound it to initialState. It also takes in the action from our 
+// actions/tutorial.actions file.
 
+export function reducer(state: Tutorial[] = [initialState], action: TutorialActions.Actions) {
+    switch (action.type) {
+        case TutorialActions.ADD_TUTORIAL:
+            return [...state, action.payload];
+
+        default:
+            return state;
+    }
 }
