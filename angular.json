@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "rxjx-tutorial"
+    }
+  },
+  "defaultProject": "rxjx-tutorial",
+  "cli": {
+    "analytics": false
+  }
 }
